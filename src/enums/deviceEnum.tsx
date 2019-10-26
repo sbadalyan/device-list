@@ -1,5 +1,10 @@
 export enum DeviceActionTypes {
-  AddDevice = 'addDevice',
-  RemoveDevice = 'removeDevice',
+  ReturnDevice = 'returnDevice',
+  PickupDevice = 'pickupDevice',
   LoadDevices = 'loadDevices',
+};
+
+export enum DeviceStatusTypes {
+  Inuse = 'inuse',
+  Free = 'free',
 };

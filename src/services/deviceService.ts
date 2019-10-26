@@ -20,7 +20,9 @@ export function getDevicesService(){
   return Promise.all(deviceList().map(device => {
       return getDevicesRequest(device).then((result: any) => {
         const matchingItem = result.find((item: any) => item.DeviceName === device)
+        console.log(matchingItem);
         return {
+          id: matchingItem.DeviceName,
           title: matchingItem.DeviceName,
           bands2g: matchingItem._2g_bands || '',
           bands3g: matchingItem._3g_bands || '', 
